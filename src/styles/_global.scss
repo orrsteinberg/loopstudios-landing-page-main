@@ -1,0 +1,32 @@
+html {
+  font-size: $font-size;
+  @include font-default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-title;
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  margin-top: 3rem;
+  padding: 2.5rem 1.5rem;
+}

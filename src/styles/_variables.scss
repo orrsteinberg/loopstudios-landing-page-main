@@ -1,0 +1,39 @@
+// Colors
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$dark-gray: hsl(0, 0%, 55%);
+$very-dark-gray: hsl(0, 0%, 41%);
+
+// Typography
+$font-size: 15px;
+
+// Mixins
+@mixin font-default {
+  font-family: "Alata", Arial, sans-serif;
+  font-weight: 400;
+}
+
+@mixin font-title {
+  font-family: "Josefin Sans", Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+// Media queries
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

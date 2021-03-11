@@ -1,0 +1,8 @@
+// Load CSS Reset from NPM
+@import "~normalize.css";
+
+// Partials
+@import "./variables";
+@import "./global";
+@import "./navbar";
+@import "./hero";
