@@ -1,38 +1,71 @@
 .navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  display: flex;
-  padding: 2.5rem 1.5rem;
-  justify-content: space-between;
-  align-items: center;
+  padding: 3.2rem 1.5rem;
   z-index: 1;
+  transition: background 0.2s ease;
+
+  &--scrolled {
+    background: $black;
+  }
 
   &__logo {
+    position: fixed;
+    top: 2.5rem;
+    left: 1.5rem;
     width: 150px;
+    z-index: 3;
+    cursor: pointer;
   }
 
   &__menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background: darkgray;
+    align-items: flex-start;
+    background: $black;
+    margin: 0;
+    padding: 0;
     z-index: 2;
-    display: none;
+    transform: translateX(-2000px);
+    transition: all 0.2s ease;
+
+    &--active {
+      transform: translateX(0);
+    }
+
+    &-item {
+      @include font-title;
+      font-size: 1.8rem;
+      margin-left: 1.5rem;
+      margin-bottom: 1.8rem;
+    }
   }
 
   &__toggle {
+    position: fixed;
+    z-index: 3;
     width: 25px;
+    right: 1.5rem;
+    top: 2.5rem;
     height: 25px;
     background: url("../images/icon-hamburger.svg") no-repeat;
     background-position: center;
     background-size: contain;
+    outline-offset: 3px;
+    cursor: pointer;
+
+    &--active {
+      background: url("../images/icon-close.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
   }
 }
