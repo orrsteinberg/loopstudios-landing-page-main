@@ -61,11 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggleElement = document.querySelector(".navbar__toggle");
   const navMenuElement = document.querySelector(".navbar__menu");
 
-  if (navbar && navToggle && navLogo && navMenu) {
+  if (navElement && navToggleElement && navLogoElement && navMenuElement) {
     // Get mobile nav handler functions
     const { handleScroll, handleToggleClick, handleLogoClick } = mobileNav(
       navElement,
-      navLogoElement,
+      navToggleElement,
       navMenuElement
     );
 
