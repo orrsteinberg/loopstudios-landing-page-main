@@ -1,0 +1,39 @@
+.footer {
+  margin-top: 5.4rem;
+  background: $black;
+  text-align: center;
+  padding-bottom: 4rem;
+
+  &__nav ul {
+    margin-top: 3.8rem;
+    padding: 0;
+  }
+
+  &__nav-item {
+    margin: 1.6rem auto;
+  }
+
+  &__logo {
+    width: 145px;
+    margin-bottom: 0.6rem;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+  }
+
+  &__social-icon {
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+
+  &__copyrights {
+    margin-top: 1.25rem;
+    color: $dark-gray;
+  }
+}
