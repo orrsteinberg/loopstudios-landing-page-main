@@ -1,0 +1,19 @@
+.intro {
+  padding-top: 2.5rem;
+
+  &__content {
+    margin-top: 3rem;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    color: $dark-gray;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+}
