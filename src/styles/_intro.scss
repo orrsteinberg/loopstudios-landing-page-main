@@ -1,6 +1,6 @@
 .intro {
   position: relative;
-  margin-top: 6.4rem;
+  margin-top: 4rem;
   display: flex;
   flex-wrap: wrap;
 
@@ -10,10 +10,10 @@
     }
 
   &__image-wrapper {
-    height: 14rem;
+    height: 15rem;
     width: 100%;
     background: url("../images/mobile/image-interactive.jpg") no-repeat;
-    background-size: contain;
+    background-size: cover;
 
     @include for-tablet-portrait-up {
       left: 0;
@@ -24,7 +24,7 @@
   }
 
   &__content {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 
     @include for-tablet-portrait-up {
       position: absolute;
