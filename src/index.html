@@ -15,7 +15,7 @@
   <title>Loopstudios landing page</title>
 
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { margin: 0; padding: 0; font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
@@ -91,7 +91,10 @@
       <div class="creations__gallery">
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-deep-earth.jpg" alt="Deep earth">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-deep-earth.jpg" alt="Deep earth">
+            <img src="images/desktop/image-deep-earth.jpg" alt="Deep earth">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>Deep</span> earth
@@ -100,7 +103,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-night-arcade.jpg" alt="Night arcade">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-night-arcade.jpg" alt="Night arcade">
+            <img src="images/desktop/image-night-arcade.jpg" alt="Night arcade">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>Night</span> arcade
@@ -109,7 +115,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-soccer-team.jpg" alt="Soccer team">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-soccer-team.jpg" alt="Soccer team">
+            <img src="images/desktop/image-soccer-team.jpg" alt="Soccer team">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>Soccer</span> team VR
@@ -118,7 +127,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-grid.jpg" alt="The grid">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-grid.jpg" alt="The grid">
+            <img src="images/desktop/image-grid.jpg" alt="The grid">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>The</span> grid
@@ -127,7 +139,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-from-above.jpg" alt="From up above VR">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-from-above.jpg" alt="From up above VR">
+            <img src="images/desktop/image-from-above.jpg" alt="From up above VR">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>From up</span> above VR
@@ -136,7 +151,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-pocket-borealis.jpg" alt="Pocket borealis">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-pocket-borealis.jpg" alt="Pocket borealis">
+            <img src="images/desktop/image-pocket-borealis.jpg" alt="Pocket borealis">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>Pocket</span> borealis
@@ -145,7 +163,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-curiosity.jpg" alt="The curiosity">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-curiosity.jpg" alt="The curiosity">
+            <img src="images/desktop/image-curiosity.jpg" alt="The curiosity">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>The</span> curiosity
@@ -154,7 +175,10 @@
         </div>
 
         <div class="card">
-        <img class="card__image" src="images/mobile/image-fisheye.jpg" alt="Make it fisheye">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-fisheye.jpg" alt="Make it fisheye">
+            <img src="images/desktop/image-fisheye.jpg" alt="Make it fisheye">
+          </picture>
          <div class="card__text">
            <h3 class="card__title">
               <span>Make it</span> fisheye
@@ -166,63 +190,59 @@
   </main>
 
   <footer class="footer">
-    <div class="footer__row">
-      <div class="footer__logo">
-      </div>
-      <div class="footer__social">
-      </div>
-    </div>
-    <div class="footer__row">
-      <nav class="footer__nav">
-        <ul>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              <img class="footer__logo" src="images/logo.svg" alt="Loopstudios logo">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__left-col">
+          <img class="footer__logo" src="images/logo.svg" alt="Loopstudios logo">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  About
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Careers
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Events
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Products
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Support
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__right-col">
+          <div class="footer__social">
+            <a class="footer__social-icon">
+              <img src="images/icon-facebook.svg" alt="Facebook icon">
             </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              About
+            <a class="footer__social-icon">
+              <img src="images/icon-twitter.svg" alt="Twitter icon">
             </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Careers
+            <a class="footer__social-icon">
+              <img src="images/icon-pinterest.svg" alt="Pinterest icon">
             </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Events
+            <a class="footer__social-icon">
+              <img src="images/icon-instagram.svg" alt="Instagram icon">
             </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Products
-            </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Support
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer__social">
-        <a class="footer__social-icon">
-          <img src="images/icon-facebook.svg" alt="Facebook icon">
-        </a>
-        <a class="footer__social-icon">
-          <img src="images/icon-twitter.svg" alt="Twitter icon">
-        </a>
-        <a class="footer__social-icon">
-          <img src="images/icon-pinterest.svg" alt="Pinterest icon">
-        </a>
-        <a class="footer__social-icon">
-          <img src="images/icon-instagram.svg" alt="Instagram icon">
-        </a>
-      </div>
-      <div class="footer__copyrights">
-        © 2021 Loopstudios. All rights reserved.
+          </div>
+          <div class="footer__copyrights">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
+        </div>
       </div>
     </div>
   </footer>
