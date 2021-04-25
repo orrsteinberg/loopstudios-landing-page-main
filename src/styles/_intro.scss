@@ -1,21 +1,62 @@
 .intro {
-  padding-top: 6.4rem;
+  position: relative;
+  margin-top: 6.4rem;
+  display: flex;
+  flex-wrap: wrap;
+
+    @include for-tablet-portrait-up {
+      margin-top: 9.9rem;
+      flex-wrap: nowrap;
+    }
+
+  &__image-wrapper {
+    height: 14rem;
+    width: 100%;
+    background: url("../images/mobile/image-interactive.jpg") no-repeat;
+    background-size: contain;
+
+    @include for-tablet-portrait-up {
+      left: 0;
+      height: 35rem;
+      background: url("../images/desktop/image-interactive.jpg") no-repeat;
+      background-position: left;
+    }
+  }
 
   &__content {
-    margin-top: 3rem;
+    margin-top: 2rem;
+
+    @include for-tablet-portrait-up {
+      position: absolute;
+      top: 37.1%;
+      right: 0;
+      max-width: 49%;
+      margin: 0;
+      padding: 3.8rem 6.4rem;
+      padding-right: 0;
+      background: $white;
+      text-align: left;
+    }
   }
 
   &__title {
     font-size: 2.15rem;
     line-height: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+
+    @include for-tablet-portrait-up {
+      font-size: 3.3rem;
+    }
   }
 
   &__text {
-    color: $very-dark-gray;
+    color: $dark-gray;
     font-size: 1rem;
     line-height: 1.7;
     padding: 0 1rem;
-  }
 
+    @include for-tablet-portrait-up {
+      padding: 0;
+    }
+  }
 }
