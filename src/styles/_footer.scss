@@ -3,6 +3,7 @@
   background: $black;
   text-align: center;
   padding-bottom: 4rem;
+  position: relative;
 
     @include for-tablet-portrait-up {
       margin-top: 10.75rem;
@@ -13,7 +14,7 @@
     @include for-tablet-portrait-up {
       display: flex;
       justify-content: space-between;
-      padding: 3rem 0;
+      padding: 3rem 0 1.5rem 0;
     }
   }
 
@@ -130,5 +131,20 @@
   &__copyrights {
     margin-top: 1.7rem;
     color: $dark-gray;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: hsl(0%, 0%, 100%);
+  margin: 0;
+  padding: 0.25rem 0;
+  font-size: 11px;
+
+  & a {
+   color: hsl(228, 45%, 44%);
   }
 }
