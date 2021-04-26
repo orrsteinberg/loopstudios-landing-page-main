@@ -5,13 +5,13 @@
   padding-bottom: 4.2rem;
   position: relative;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       margin-top: 10.75rem;
       padding: 0;
     }
 
   &__row {
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       display: flex;
       justify-content: space-between;
       padding: 3rem 0 1.5rem 0;
@@ -19,7 +19,7 @@
   }
 
   &__left-col {
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -28,7 +28,7 @@
   }
 
   &__right-col {
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -40,7 +40,7 @@
     margin-top: 1rem;
     padding: 0;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       display: flex;
       margin: 0;
     }
@@ -49,7 +49,7 @@
   &__nav-item {
     margin: 1.6rem auto;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       margin-top: 1.3rem;
       margin-right: 2.2rem;
       position: relative;
@@ -80,7 +80,7 @@
     margin-top: 3.8rem;
     margin-bottom: 0.6rem;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       margin-top: 0;
       margin-right: 2rem;
     }
@@ -94,7 +94,7 @@
     margin-top: 3.3rem;
     margin-bottom: 1rem;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       justify-content: flex-end;
       margin: 0;
     }
@@ -104,7 +104,7 @@
     margin: 0 0.5rem;
     cursor: pointer;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       margin: 0;
       margin-left: 1.1rem;
       position: relative;
@@ -134,7 +134,7 @@
     margin-top: 1.2rem;
     color: $dark-gray;
 
-    @include for-tablet-portrait-up {
+    @include for-large-up {
       margin-top: 1.7rem;
     }
   }

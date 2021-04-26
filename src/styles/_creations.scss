@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
 
-  @include for-tablet-portrait-up {
+  @include for-small-up {
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
@@ -16,7 +16,7 @@
     order: 1;
     font-size: 2.1rem;
 
-    @include for-tablet-portrait-up {
+    @include for-small-up {
       font-size: 3.2rem;
     }
   }
@@ -24,7 +24,7 @@
   &__button {
     order: 3;
     background: none;
-    border: 2px solid $very-dark-gray;
+    border: 2px solid $black;
     color: $black;
     @include font-default;
     text-transform: uppercase;
@@ -37,9 +37,12 @@
     cursor: pointer;
     transition: color 0.2s, background 0.2s;
 
-    @include for-tablet-portrait-up {
+    @include for-small-up {
       order: 2;
       margin: 0;
+    }
+
+    @include for-medium-up {
       font-size: 1rem;
 
       &:hover {
@@ -49,6 +52,7 @@
 
       &:active {
         background: $very-dark-gray;
+        border-color: $very-dark-gray;
       }
     }
   }
@@ -57,11 +61,15 @@
     order: 2;
     margin-top: 1.2rem;
 
-    @include for-tablet-portrait-up {
+    @include for-small-up {
       margin-top: 2.4rem;
       order: 3;
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include for-large-up {
       justify-content: space-between;
     }
 
@@ -80,20 +88,20 @@
         right: 0;
         background: linear-gradient(90deg, rgba($black, 0.6) 0%, transparent 100%);
 
-        @include for-tablet-portrait-up {
+        @include for-small-up {
           background: linear-gradient(180deg, transparent 0%, rgba($black, 0.6) 100% );
         }
       }
 
       &:hover {
         & .card__title {
-          @include for-tablet-portrait-up {
+          @include for-medium-up {
             color: $black;
           }
         }
 
         &::before {
-          @include for-tablet-portrait-up {
+          @include for-medium-up {
             background: linear-gradient(180deg, rgba($white, 0.7) 30%, rgba($light-gray, 0.9) 100% );
           }
         }
@@ -112,7 +120,7 @@
         left: 6%;
         text-align: left;
 
-        @include for-tablet-portrait-up {
+        @include for-medium-up {
           left: 2.7rem;
           bottom: 2.1rem;
         }
@@ -128,7 +136,7 @@
           display: block;
         }
 
-        @include for-tablet-portrait-up {
+        @include for-medium-up {
           font-size: 2.1rem;
         }
       }

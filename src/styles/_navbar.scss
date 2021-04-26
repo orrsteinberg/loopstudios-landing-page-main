@@ -7,7 +7,7 @@
   z-index: 1;
   transition: background 0.2s ease;
 
-  @include for-tablet-portrait-up {
+  @include for-medium-up {
     position: absolute;
     top: 2.4rem;
   }
@@ -15,7 +15,7 @@
   &--scrolled {
     background: $black;
 
-    @include for-tablet-portrait-up {
+    @include for-medium-up {
       background: none;
     }
   }
@@ -45,7 +45,7 @@
       align-items: center;
       padding: 1.6rem;
 
-      @include for-tablet-portrait-up {
+      @include for-container-width-up {
         padding: 1rem 0;
       }
   }
@@ -54,7 +54,7 @@
     width: 140px;
     cursor: pointer;
 
-    @include for-tablet-portrait-up {
+    @include for-medium-up {
       position: static;
       display: block;
       height: auto;
@@ -79,7 +79,7 @@
     transition: transform 0.2s ease;
     transform: translateX(-2000px);
 
-    @include for-tablet-portrait-up {
+    @include for-medium-up {
       position: static;
       transform: translateX(0);
       flex-direction: row;
@@ -95,7 +95,7 @@
       margin-left: 1.5rem;
       margin-bottom: 1.4rem;
 
-      @include for-tablet-portrait-up {
+      @include for-medium-up {
         @include font-default;
         text-transform: none;
         font-size: 1rem;
@@ -134,7 +134,7 @@
     outline-offset: 3px;
     cursor: pointer;
 
-    @include for-tablet-portrait-up {
+    @include for-medium-up {
       display: none;
     }
   }

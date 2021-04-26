@@ -37,12 +37,20 @@ section {
   padding: 2rem 1.6rem 0 1.6rem;
   text-align: center;
 
-  @include for-tablet-portrait-up {
+  @include for-medium-up {
     padding: 0;
   }
 }
 
 .container {
-  max-width: 1112px;
+  max-width: $container-width;
   margin: 0 auto;
+
+  @include for-small-up {
+    padding: 0 1rem;
+  }
+
+  @include for-container-width-up {
+    padding: 0;
+  }
 }
