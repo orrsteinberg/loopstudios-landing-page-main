@@ -10,223 +10,238 @@
   <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" media="all">
-
   <title>Loopstudios landing page</title>
-
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
   <nav class="navbar">
-    <img class="navbar__logo" src="images/logo.svg" alt="Loopstudios logo">
-    <ul class="navbar__menu">
-      <li class="navbar__menu-item">
-        <a class="navbar__menu-link" href="#">
-          About
-        </a>
-      </li>
-      <li class="navbar__menu-item">
-        <a class="navbar__menu-link" href="#">
-          Careers
-        </a>
-      </li>
-      <li class="navbar__menu-item">
-        <a class="navbar__menu-link" href="#">
-          Events
-        </a>
-      </li>
-      <li class="navbar__menu-item">
-        <a class="navbar__menu-link" href="#">
-          Products
-        </a>
-      </li>
-      <li class="navbar__menu-item">
-        <a class="navbar__menu-link" href="#">
-          Support
-        </a>
-      </li>
-    </ul>
-    <button class="navbar__toggle"></button>
+    <div class="container">
+      <img class="navbar__logo" src="images/logo.svg" alt="Loopstudios logo">
+      <ul class="navbar__menu">
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="#">
+            About
+          </a>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="#">
+            Careers
+          </a>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="#">
+            Events
+          </a>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="#">
+            Products
+          </a>
+        </li>
+        <li class="navbar__menu-item">
+          <a class="navbar__menu-link" href="#">
+            Support
+          </a>
+        </li>
+      </ul>
+      <button class="navbar__toggle"></button>
+    </div>
   </nav>
 
   <header class="hero">
-    <img class="hero__image" src="images/mobile/image-hero.jpg" alt="">
-    <div class="hero__box">
-      <h1 class="hero__text">
-        Immersive experiences that deliver
-      </h1>
+    <div class="container">
+      <div class="hero__box">
+        <h1 class="hero__text">
+          Immersive experiences that deliver
+        </h1>
+      </div>
     </div>
   </header>
 
-  <section class="intro">
-    <div class="intro__image-wrapper">
-      <img class="intro__image" src="images/mobile/image-interactive.jpg" alt="Person with VR headset">
-    </div>
-    <div class="intro__content">
-      <h2 class="intro__title">
-        The leader in interactive VR
+  <main class="container">
+    <section class="intro">
+      <div class="intro__image-wrapper">
+      </div>
+      <div class="intro__content">
+        <h2 class="intro__title">
+          The leader in interactive VR
+        </h2>
+        <p class="intro__text">
+          Founded in 2011, Loopstudios has been producing world-class virtual reality
+          projects for some of the best companies around the globe. Our award-winning
+          creations have transformed businesses through digital experiences that bind
+          to their brand.
+        </p>
+      </div>
+    </section>
+
+    <section class="creations">
+      <h2 class="creations__title">
+        Our creations
       </h2>
-      <p class="intro__text">
-        Founded in 2011, Loopstudios has been producing world-class virtual reality
-        projects for some of the best companies around the globe. Our award-winning
-        creations have transformed businesses through digital experiences that bind
-        to their brand.
-      </p>
-    </div>
-  </section>
+      <button class="creations__button">
+        See all
+      </button>
+      <div class="creations__gallery">
 
-  <section class="creations">
-    <h2 class="creations__title">
-      Our creations
-    </h2>
-    <button class="creations__button">
-      See all
-    </button>
-    <div class="creations__gallery">
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-deep-earth.jpg" alt="Deep earth">
+            <img src="images/desktop/image-deep-earth.jpg" alt="Deep earth">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>Deep</span> earth
+           </h3>
+         </div>
+        </div>
 
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-deep-earth.jpg" alt="Deep earth">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>Deep</span> earth
-         </h3>
-       </div>
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-night-arcade.jpg" alt="Night arcade">
+            <img src="images/desktop/image-night-arcade.jpg" alt="Night arcade">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>Night</span> arcade
+           </h3>
+         </div>
+        </div>
+
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-soccer-team.jpg" alt="Soccer team">
+            <img src="images/desktop/image-soccer-team.jpg" alt="Soccer team">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>Soccer</span> team VR
+           </h3>
+         </div>
+        </div>
+
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-grid.jpg" alt="The grid">
+            <img src="images/desktop/image-grid.jpg" alt="The grid">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>The</span> grid
+           </h3>
+         </div>
+        </div>
+
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-from-above.jpg" alt="From up above VR">
+            <img src="images/desktop/image-from-above.jpg" alt="From up above VR">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>From up</span> above VR
+           </h3>
+         </div>
+        </div>
+
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-pocket-borealis.jpg" alt="Pocket borealis">
+            <img src="images/desktop/image-pocket-borealis.jpg" alt="Pocket borealis">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>Pocket</span> borealis
+           </h3>
+         </div>
+        </div>
+
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-curiosity.jpg" alt="The curiosity">
+            <img src="images/desktop/image-curiosity.jpg" alt="The curiosity">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>The</span> curiosity
+           </h3>
+         </div>
+        </div>
+
+        <div class="card">
+          <picture class="card__image">
+            <source media="(max-width: 654px)" srcset="images/mobile/image-fisheye.jpg" alt="Make it fisheye">
+            <img src="images/desktop/image-fisheye.jpg" alt="Make it fisheye">
+          </picture>
+         <div class="card__text">
+           <h3 class="card__title">
+              <span>Make it</span> fisheye
+           </h3>
+         </div>
+        </div>
       </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-night-arcade.jpg" alt="Night arcade">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>Night</span> arcade
-         </h3>
-       </div>
-      </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-soccer-team.jpg" alt="Soccer team">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>Soccer</span> team VR
-         </h3>
-       </div>
-      </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-grid.jpg" alt="The grid">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>The</span> grid
-         </h3>
-       </div>
-      </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-from-above.jpg" alt="From up above VR">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>From up</span> above VR
-         </h3>
-       </div>
-      </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-pocket-borealis.jpg" alt="Pocket borealis">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>Pocket</span> borealis
-         </h3>
-       </div>
-      </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-curiosity.jpg" alt="The curiosity">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>The</span> curiosity
-         </h3>
-       </div>
-      </div>
-
-      <div class="card">
-      <img class="card__image" src="images/mobile/image-fisheye.jpg" alt="Make it fisheye">
-       <div class="card__text">
-         <h3 class="card__title">
-            <span>Make it</span> fisheye
-         </h3>
-       </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer class="footer">
-    <div class="footer__row">
-      <div class="footer__logo">
-      </div>
-      <div class="footer__social">
+    <div class="container">
+      <div class="footer__row">
+        <div class="footer__left-col">
+          <img class="footer__logo" src="images/logo.svg" alt="Loopstudios logo">
+          <nav class="footer__nav">
+            <ul>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  About
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Careers
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Events
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Products
+                </a>
+              </li>
+              <li class="footer__nav-item">
+                <a class="footer__nav-link" href="#">
+                  Support
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__right-col">
+          <div class="footer__social">
+            <a class="footer__social-icon">
+              <img src="images/icon-facebook.svg" alt="Facebook icon">
+            </a>
+            <a class="footer__social-icon">
+              <img src="images/icon-twitter.svg" alt="Twitter icon">
+            </a>
+            <a class="footer__social-icon">
+              <img src="images/icon-pinterest.svg" alt="Pinterest icon">
+            </a>
+            <a class="footer__social-icon">
+              <img src="images/icon-instagram.svg" alt="Instagram icon">
+            </a>
+          </div>
+          <div class="footer__copyrights">
+            © 2021 Loopstudios. All rights reserved.
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer__row">
-      <nav class="footer__nav">
-        <ul>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              <img class="footer__logo" src="images/logo.svg" alt="Loopstudios logo">
-            </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              About
-            </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Careers
-            </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Events
-            </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Products
-            </a>
-          </li>
-          <li class="footer__nav-item">
-            <a class="footer__nav-link" href="#">
-              Support
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="footer__social">
-        <a class="footer__social-icon">
-          <img src="images/icon-facebook.svg" alt="Facebook icon">
-        </a>
-        <a class="footer__social-icon">
-          <img src="images/icon-twitter.svg" alt="Twitter icon">
-        </a>
-        <a class="footer__social-icon">
-          <img src="images/icon-pinterest.svg" alt="Pinterest icon">
-        </a>
-        <a class="footer__social-icon">
-          <img src="images/icon-instagram.svg" alt="Instagram icon">
-        </a>
-      </div>
-      <div class="footer__copyrights">
-        © 2021 Loopstudios. All rights reserved.
-      </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https:///www.github.com/orrsteinberg">Orr Steinberg</a>.
     </div>
   </footer>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https:///www.github.com/orrsteinberg">Orr Steinberg</a>.
-  </div>
-  <script src="bundle.js"></script>
 </body>
 </html>

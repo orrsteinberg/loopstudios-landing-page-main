@@ -2,20 +2,88 @@
   margin-top: 5.4rem;
   background: $black;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 4.2rem;
+  position: relative;
+
+    @include for-large-up {
+      margin-top: 10.75rem;
+      padding: 0;
+    }
+
+  &__row {
+    @include for-large-up {
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 0 1.5rem 0;
+    }
+  }
+
+  &__left-col {
+    @include for-large-up {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  &__right-col {
+    @include for-large-up {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+  }
 
   &__nav ul {
-    margin-top: 3.8rem;
+    margin-top: 1rem;
     padding: 0;
+
+    @include for-large-up {
+      display: flex;
+      margin: 0;
+    }
   }
 
   &__nav-item {
     margin: 1.6rem auto;
+
+    @include for-large-up {
+      margin-top: 1.3rem;
+      margin-right: 2.2rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 140%;
+        top: calc(100% + 12px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: $white;
+        transition: width 0.2s;
+      }
+
+      &:hover {
+        &::before {
+          width: 50%;
+        }
+      }
+    }
   }
 
   &__logo {
     width: 145px;
+    margin-top: 3.8rem;
     margin-bottom: 0.6rem;
+
+    @include for-large-up {
+      margin-top: 0;
+      margin-right: 2rem;
+    }
   }
 
   &__social {
@@ -23,17 +91,66 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 3.3rem;
     margin-bottom: 1rem;
+
+    @include for-large-up {
+      justify-content: flex-end;
+      margin: 0;
+    }
   }
 
   &__social-icon {
     margin: 0 0.5rem;
     cursor: pointer;
+
+    @include for-large-up {
+      margin: 0;
+      margin-left: 1.1rem;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 140%;
+        top: calc(100% + 4px);
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background: $white;
+        transition: width 0.2s;
+      }
+
+      &:hover {
+        &::before {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &__copyrights {
-    margin-top: 1.25rem;
+    margin-top: 1.2rem;
     color: $dark-gray;
+
+    @include for-large-up {
+      margin-top: 1.7rem;
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: hsl(0%, 0%, 100%);
+  margin: 0;
+  padding: 0.25rem 0;
+  font-size: 11px;
+
+  & a {
+   color: hsl(228, 45%, 44%);
   }
 }

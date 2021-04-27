@@ -3,42 +3,90 @@
   top: 0;
   left: 0;
   right: 0;
-  padding: 3.2rem 1.5rem;
+  padding: 1rem 0;
   z-index: 1;
   transition: background 0.2s ease;
 
+  @include for-medium-up {
+    position: absolute;
+    top: 2.4rem;
+  }
+
   &--scrolled {
     background: $black;
+
+    @include for-medium-up {
+      background: none;
+    }
+  }
+
+  &--active {
+    & .navbar__menu {
+      transform: translateX(0);
+    }
+
+    & .navbar__logo {
+      position: relative;
+      z-index: 3;
+    }
+
+    & .navbar__toggle {
+      position: relative;
+      z-index: 3;
+      background: url("../images/icon-close.svg") no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem;
+
+      @include for-container-width-up {
+        padding: 1rem 0;
+      }
   }
 
   &__logo {
-    position: fixed;
-    top: 2.5rem;
-    left: 1.5rem;
     width: 140px;
-    z-index: 3;
     cursor: pointer;
+
+    @include for-medium-up {
+      position: static;
+      display: block;
+      height: auto;
+      width: 192px;
+    }
   }
 
   &__menu {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: $black;
     margin: 0;
     padding: 0;
     padding-top: 14.5rem;
-    z-index: 2;
+    height: 100vh;
+    background: $black;
+    transition: transform 0.2s ease;
     transform: translateX(-2000px);
-    transition: all 0.2s ease;
 
-    &--active {
+    @include for-medium-up {
+      position: static;
       transform: translateX(0);
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 0;
+      background: none;
+      height: auto;
     }
 
     &-item {
@@ -46,26 +94,48 @@
       font-size: 1.55rem;
       margin-left: 1.5rem;
       margin-bottom: 1.4rem;
+
+      @include for-medium-up {
+        @include font-default;
+        text-transform: none;
+        font-size: 1rem;
+        margin: 0;
+        margin-left: 2.2rem;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 140%;
+          top: calc(100% + 12px);
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background: $white;
+          transition: width 0.2s;
+        }
+
+        &:hover {
+          &::before {
+            width: 50%;
+          }
+        }
+      }
     }
   }
 
   &__toggle {
-    position: fixed;
-    z-index: 3;
-    width: 20px;
-    right: 1.6rem;
-    top: 2.5rem;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     background: url("../images/icon-hamburger.svg") no-repeat;
     background-position: center;
     background-size: contain;
     outline-offset: 3px;
     cursor: pointer;
 
-    &--active {
-      background: url("../images/icon-close.svg") no-repeat;
-      background-position: center;
-      background-size: contain;
+    @include for-medium-up {
+      display: none;
     }
   }
 }

@@ -1,5 +1,27 @@
 .hero {
   position: relative;
+  height: 43.5rem;
+  background: url("../images/mobile/image-hero.jpg") no-repeat;
+  background-size: contain;
+
+  @include for-extra-small-up {
+    background-size: cover;
+  }
+
+  @include for-medium-up {
+    background: url("../images/desktop/image-hero.jpg") no-repeat;
+    background-position: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+  }
 
   &__image {
     width: 100%;
@@ -7,10 +29,27 @@
 
   &__box {
     position: absolute;
-    top: 30%;
+    top: 12.5rem;
     border: 2px solid $white;
     padding: 1.5rem 1.75rem 1rem 1.75rem;
-    margin: 2.5rem 1.5rem;
+    margin: 2.5rem 0rem;
+
+    @include for-extra-small-up {
+      margin: 2.5rem 1.5rem;
+    }
+
+    @include for-small-up {
+      border-width: 3px;
+      top: 15rem;
+      padding-top: 2.6rem;
+      padding-left: 2.6rem;
+      padding-bottom: 1.8rem;
+      max-width: 658px;
+    }
+
+    @include for-medium-up {
+      margin: 0;
+    }
   }
 
   &__text {
@@ -18,5 +57,10 @@
     color: $white;
     font-size: 2.6rem;
     line-height: 1;
+
+    @include for-medium-up {
+      font-size: 4.7rem;
+      letter-spacing: 1.1px;
+    }
   }
 }

@@ -1,17 +1,30 @@
 .creations {
-  padding-top: 3.5rem;
+  padding-top: 0;
   display: flex;
   flex-direction: column;
+
+  @include for-small-up {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 5.5rem;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   &__title {
     order: 1;
     font-size: 2.1rem;
+
+    @include for-small-up {
+      font-size: 3.2rem;
+    }
   }
 
   &__button {
     order: 3;
     background: none;
-    border: 2px solid $very-dark-gray;
+    border: 2px solid $black;
     color: $black;
     @include font-default;
     text-transform: uppercase;
@@ -22,15 +35,49 @@
     padding: 0.8rem 2.5rem;
     line-height: 1;
     cursor: pointer;
+    transition: color 0.2s, background 0.2s;
+
+    @include for-small-up {
+      order: 2;
+      margin: 0;
+    }
+
+    @include for-medium-up {
+      font-size: 1rem;
+
+      &:hover {
+        color: $white;
+        background: $black;
+      }
+
+      &:active {
+        background: $very-dark-gray;
+        border-color: $very-dark-gray;
+      }
+    }
   }
 
   &__gallery {
     order: 2;
     margin-top: 1.2rem;
 
+    @include for-small-up {
+      margin-top: 2.4rem;
+      order: 3;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    @include for-large-up {
+      justify-content: space-between;
+    }
+
     & .card {
       position: relative;
       margin-bottom: 1.5rem;
+      box-shadow: 0px 0px 12px -9px rgba(0,0,0,0.35);
+      cursor: pointer;
 
       &::before {
         content: "";
@@ -40,9 +87,28 @@
         left: 0;
         right: 0;
         background: linear-gradient(90deg, rgba($black, 0.6) 0%, transparent 100%);
+
+        @include for-small-up {
+          background: linear-gradient(180deg, transparent 0%, rgba($black, 0.6) 100% );
+        }
       }
 
-      &__image {
+      &:hover {
+        & .card__title {
+          @include for-medium-up {
+            color: $black;
+          }
+        }
+
+        &::before {
+          @include for-medium-up {
+            background: linear-gradient(180deg, rgba($white, 0.7) 30%, rgba($light-gray, 0.9) 100% );
+          }
+        }
+      }
+
+      &__image > * {
+        // Remove whitespace on picture's children (source and img)
         display: block;
       }
 
@@ -53,6 +119,11 @@
         bottom: 17%;
         left: 6%;
         text-align: left;
+
+        @include for-medium-up {
+          left: 2.7rem;
+          bottom: 2.1rem;
+        }
       }
 
       &__title {
@@ -63,6 +134,10 @@
 
         & span {
           display: block;
+        }
+
+        @include for-medium-up {
+          font-size: 2.1rem;
         }
       }
     }
