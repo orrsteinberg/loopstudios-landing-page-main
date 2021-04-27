@@ -1,37 +1,36 @@
-const mobileNav = (navbar) => {
-  // Current menu status
+const throttle = (callback, interval) => {
+  // Limit rate of function calls (while scrolling, in our case)
+  let allowCall = true;
+
+  return () => {
+    if (allowCall) {
+      allowCall = false;
+      callback();
+      setTimeout(() => (allowCall = true), interval);
+    }
+  };
+};
+
+const mobileNav = (navElement) => {
   // Handler functions will have private access to this variable via closure
   let menuIsOpen = false;
 
-  // Limit rate of function calls (while scrolling, in our case)
-  const throttle = (callback, interval) => {
-    let allowCall = true;
-
-    return () => {
-      if (allowCall) {
-        allowCall = false;
-        callback();
-        setTimeout(() => (allowCall = true), interval);
-      }
-    };
-  };
-
   // If scrolled, add a dynamic class to the navbar (to add a background in our case)
   const handleScroll = () => {
-    if (window.scrollY > navbar.offsetHeight) {
-      navbar.classList.add("navbar--scrolled");
+    if (window.scrollY > navElement.offsetHeight) {
+      navElement.classList.add("navbar--scrolled");
     } else {
-      navbar.classList.remove("navbar--scrolled");
+      navElement.classList.remove("navbar--scrolled");
     }
   };
 
   // Toggle menu, change icon button and enable/disable scrolling appropriately
   const handleToggleClick = () => {
     if (menuIsOpen) {
-      navbar.classList.remove("navbar--active");
+      navElement.classList.remove("navbar--active");
       document.body.style.overflow = "auto";
     } else {
-      navbar.classList.add("navbar--active");
+      navElement.classList.add("navbar--active");
       document.body.style.overflow = "hidden";
     }
     menuIsOpen = !menuIsOpen;
